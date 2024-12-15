@@ -11,6 +11,6 @@
 
 (check-equal? 1 (car (reverse (list 1))))
 (define r-list (reverse (list 8 6 7)))
-(check-equal? 7 (car r-list))
-(check-equal? 6 (car (cdr r-list)))
-(check-equal? 8 (car (cdr (cdr r-list))))
+(check-equal? 7 (list-ref r-list 0))
+(check-equal? 6 (list-ref r-list 1))
+(check-equal? 8 (list-ref r-list 2))
