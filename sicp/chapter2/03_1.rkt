@@ -15,7 +15,7 @@
   (cons b-l (cons l w)))
 
 (define (rect-length r)
- (car (cdr r)))
+  (car (cdr r)))
 
 (define (rect-width r)
   (cdr (cdr r)))

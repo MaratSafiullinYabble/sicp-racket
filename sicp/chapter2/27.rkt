@@ -7,10 +7,10 @@
     (if (null? list)
         r-list
         (let* ([first (car list)]
-              [rest (cdr list)]
-              [r-first (if (list? first)
-                           (reverse-deep first)
-                           first)])
+               [rest (cdr list)]
+               [r-first (if (list? first)
+                            (reverse-deep first)
+                            first)])
           (reverse-iter (cons r-first r-list) rest))))
   (reverse-iter nil list))
 
