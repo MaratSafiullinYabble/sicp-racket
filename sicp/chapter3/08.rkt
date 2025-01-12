@@ -7,9 +7,11 @@
 (define (make-f)
   (define state 0)
   (define old-state 0)
-  (lambda (x) (begin (set! old-state state)
-         (set! state x)
-         old-state)))
+  (lambda (x)
+    (begin
+      (set! old-state state)
+      (set! state x)
+      old-state)))
 
 ;-------------------------------------------------------
 
@@ -22,4 +24,3 @@
 (define right (make-f))
 
 (check-equal? (+ (right 1) (right 0)) 1)
-
